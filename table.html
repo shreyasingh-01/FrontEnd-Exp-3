@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mb-3">Student Data Table</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <form id="StudentDataForm">
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <label for="SUID" class="form-label"><h5>Student UID</h5> </label>
+                            <input type="text" class="form-control" id="SUID">
+                        </div>
+                        <label for="FirstName" class="form-label"> <h5>Student First Name</h5></label>
+                        <input type="text" class="form-control" id="FirstName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Lastname" class="form-label"> <h5>Student Last Name</h5></label>
+                        <input type="text" class="form-control" id="LastName">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="Email" class="form-label"><h5>Email Address</h5></label>
+                        <input type="email" class="form-control" id="Email" >
+                    </div><br>
+                    <h5>Gender</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                        <label class="form-check-label" for="other">Other</label>
+                    </div><br><br><br>
+                    <h5> Date Of Birth </h5>
+                    <div class="row">
+                        <div class="col">
+                            <!-- <label for="day" class="form-label">Day:</label> -->
+                            <select class="form-select" id="day" name="day">
+                                <option selected>DD</option>
+
+                            </select>
+                        </div>
+                        <div class="col">
+                            <!-- <label for="month" class="form-label">Month:</label> -->
+                            <select class="form-select" id="month" name="month">
+                                <option selected>MM</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <!-- <label for="year" class="form-label">Year:</label> -->
+                            <select class="form-select" id="year" name="year">
+                                <option selected>YYYY</option>
+
+                            </select>
+                        </div>
+                    </div><br>
+                    <div class="mb-3">
+                        <h5> Contact Number</h5>
+                        <label for="contactNumber" class="form-label"></label>
+                        <input type="number" class="form-control" id="contactNumber">
+                    </div><br>
+                    <div class="row">
+                        <h5>Hobbies</h5>
+
+                        <div class="col-md-6" id="hobbie">
+                            <input type="checkbox" id="check1" name="reading" value="Reading">
+                            <label for="check"> Reading</label><br>
+                            <input type="checkbox" id="check2" name="codding" value="Codding">
+                            <label for="check"> Codding</label><br>
+                            <input type="checkbox" id="check3" name="traveling" value="Traveling">
+                            <label for="check"> Traveling</label><br><br>
+                    </div><br>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">S.NO</th>
+                            <th scope="col">UID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">D.O.B</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Hobbies</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="form.js">
+
+    </script>
+
+
+</body>
+
+</html>
